@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>APP. SANTA ROSA</title>
+        <link rel="stylesheet" href="normalize.css">
+        <link rel="stylesheet" href="materialize.min.css">
+        <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
+        <script>
+                    // Initialize Firebase
+            var config = {
+                apiKey: "AIzaSyAsnrdJhzCBdM_mRjuue26sYbKRNIhwg3A",
+                authDomain: "santa-rosa-c9eeb.firebaseapp.com",
+                databaseURL: "https://santa-rosa-c9eeb.firebaseio.com",
+                projectId: "santa-rosa-c9eeb",
+                storageBucket: "santa-rosa-c9eeb.appspot.com",
+                messagingSenderId: "171087581088"
+            };
+            firebase.initializeApp(config);
+        </script>
+    </head>
+    <body>
+        <div class="row">
+            <div class="col s12 m6 l6 push-m3 push-l3">
+                <div class="card  indigo lighten-1">
+                    <br>
+                    <h6 class="white-text lighten-5-text center">REGISTRO DE USUARIOS</h6>
+                    <input type="email" name="email" id="email" placeholder="ingresa tu email">
+                    <input type="password" name="password" id="password" placeholder="ingrese contraseña">
+                    <a onClick="registrar()" class="waves-effect waves-light btn"><i class="material-icons left"></i>REGISTRARSE</a>
+                    <br>
+                    <br>
+                    <h6 class="white-text lighten-5-text center">INGRESO DE USUARIOS</h6>
+                    <input type="email" name="email2" id="email2" placeholder="ingresa tu email">
+                    <input type="password" name="password2" id="password2" placeholder="ingrese contraseña">
+                    <a onClick="ingresar()" class="waves-effect waves-light btn"><i class="material-icons left"></i>INGRESAR</a>
+                </div>
+                    <br>
+                <div id="content">
+                </div>
+                <div id="realTime">
+                    ...
+                </div>
+            </div>
+        </div>
+
+        <script src="./app.js"></script> 
+        <script src="./dbController.js"></script>
+    </body>
+</html>
